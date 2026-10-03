@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ogBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#161f30" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="ogText" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#ogBg)" />
+  <rect x="40" y="40" width="1120" height="550" rx="24" fill="none" stroke="#334155" stroke-width="2" />
+  <text x="100" y="240" font-family="system-ui, sans-serif" font-size="64" font-weight="800" fill="#f8fafc">Muhammad Umar Abbas</text>
+  <text x="100" y="320" font-family="system-ui, sans-serif" font-size="36" font-weight="600" fill="url(#ogText)">BSCS Student &amp; QA Engineer</text>
+  <text x="100" y="400" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8">Testing LMS platforms, websites, and ERP systems | Karachi, Pakistan</text>
+  <text x="100" y="490" font-family="system-ui, sans-serif" font-size="20" fill="#64748b">muah11umar@gmail.com | github.com/muahumar</text>
+</svg>

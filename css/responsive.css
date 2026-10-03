@@ -1,0 +1,177 @@
+@media (min-width: 36rem) {
+  .container {
+    width: min(calc(100% - 3.5rem), var(--container-width));
+  }
+
+  .section-wrap {
+    padding-block: var(--space-8);
+  }
+
+  .about__intro,
+  .contact__email,
+  .contact__aside {
+    padding: var(--space-5);
+  }
+
+  .skills__grid,
+  .certificates__grid,
+  .projects__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .certificate-card {
+    padding: 1.25rem;
+  }
+
+  .timeline__card {
+    padding: 1.6rem;
+  }
+
+}
+
+@media (min-width: 48rem) {
+  .site-header__inner {
+    min-height: 5rem;
+  }
+
+  .site-nav__toggle {
+    display: none;
+  }
+
+  .site-nav__links,
+  .site-nav__links--open {
+    position: static;
+    display: flex;
+    align-items: center;
+    gap: clamp(0.7rem, 1.7vw, 1.5rem);
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+
+  .site-nav__links a {
+    padding: 0.45rem 0;
+    font-size: 0.83rem;
+    white-space: nowrap;
+  }
+
+  .site-nav__links .site-nav__contact {
+    margin: 0 0 0 0.15rem;
+    padding: 0.5rem 0.95rem;
+  }
+
+  .hero {
+    min-height: min(48rem, calc(100svh - 5rem));
+  }
+
+  .hero__grid {
+    grid-template-columns: minmax(0, 1.2fr) minmax(16rem, 0.8fr);
+    gap: var(--space-5);
+  }
+
+  .hero__visual {
+    min-height: 23rem;
+  }
+
+  .profile-photo {
+    width: min(31vw, 20rem);
+  }
+
+  .hero__orbit--one {
+    width: 24rem;
+  }
+
+  .hero__orbit--two {
+    width: 29rem;
+  }
+
+  .about__grid {
+    grid-template-columns: 0.95fr 1.05fr;
+    align-items: stretch;
+  }
+
+  .about__details {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .detail-card {
+    padding: 1.5rem;
+  }
+
+  .timeline__top {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .contact__grid {
+    grid-template-columns: minmax(0, 1.35fr) minmax(15rem, 0.65fr);
+    align-items: start;
+  }
+}
+
+@media (min-width: 64rem) {
+  .site-nav__links {
+    gap: 1.45rem;
+  }
+
+  .site-nav__links a {
+    font-size: 0.88rem;
+  }
+
+  .hero__grid {
+    grid-template-columns: minmax(0, 1.15fr) minmax(20rem, 0.85fr);
+    gap: var(--space-7);
+  }
+
+  .hero__visual {
+    min-height: 29rem;
+  }
+
+  .profile-photo {
+    width: 22rem;
+  }
+
+  .hero__orbit--one {
+    width: 27rem;
+  }
+
+  .hero__orbit--two {
+    width: 33rem;
+  }
+
+  .about__intro > p {
+    font-size: 1.15rem;
+  }
+
+  .skills__grid {
+    gap: 1.25rem;
+  }
+
+  .projects__grid {
+    gap: 1.25rem;
+  }
+
+  .project-card__art {
+    min-height: 12rem;
+  }
+
+  .project-card__body {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  :root {
+    --container-width: 74rem;
+  }
+
+  .hero__grid {
+    gap: var(--space-8);
+  }
+
+  .section-heading {
+    margin-bottom: var(--space-6);
+  }
+}

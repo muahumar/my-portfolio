@@ -1,0 +1,114 @@
+{
+  "basics": {
+    "name": "Muhammad Umar Abbas",
+    "shortName": "MUA",
+    "label": "BSCS Student & QA Engineer",
+    "headline": "I study full-time and am trying to become a complete solution architect one day.",
+    "summary": "BSCS student and QA Engineer based in Karachi, Pakistan. I test LMS platforms, websites, and ERP systems.",
+    "location": {
+      "country": "Pakistan",
+      "countryCode": "PK",
+      "region": "Karachi"
+    },
+    "email": "muah11umar@gmail.com",
+    "availability": "Currently studying BSCS at GU Tech",
+    "leadershipNote": "A team player and a born leader, my sense of responsibility is acknowledged by my professors.",
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "muhammad-umar-5b7249334",
+        "url": "https://www.linkedin.com/in/muhammad-umar-5b7249334",
+        "icon": "fa-brands fa-linkedin-in"
+      },
+      {
+        "network": "GitHub",
+        "username": "muahumar",
+        "url": "https://github.com/muahumar",
+        "icon": "fa-brands fa-github"
+      }
+    ]
+  },
+  "about": {
+    "intro": [
+      "I studied Computer Science during my O levels and learned Python on my own. I now study BSCS at GU Tech and work as a QA Engineer, testing LMS platforms, websites, and ERP systems."
+    ],
+    "strengths": [
+      "Python programming and core programming logic",
+      "Testing and quality assurance of web platforms and ERPs"
+    ]
+  },
+  "work": [
+    {
+      "company": "Uswa Tech",
+      "position": "QA Engineer",
+      "startDate": "YYYY-MM",
+      "endDate": "present",
+      "highlights": [
+        "Test LMS platforms, websites, and ERP systems"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "category": "Languages",
+      "items": [
+        "Python"
+      ]
+    },
+    {
+      "category": "QA & Testing",
+      "items": [
+        "Manual testing",
+        "Functional testing",
+        "UI/UX testing",
+        "Bug reporting",
+        "LMS / ERP testing"
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Claude 101",
+      "issuer": "Anthropic",
+      "url": "https://academy.claude.com/courses/claude-101"
+    },
+    {
+      "name": "Odoo technical bootcamp",
+      "issuer": "Odoo",
+      "url": "https://www.odoo.com/services/partners/bootcamp"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Generation's School",
+      "area": "Computer Science",
+      "studyType": "O levels",
+      "startDate": "2020-01-01",
+      "endDate": "2022-12-01"
+    },
+    {
+      "institution": "Generation's college",
+      "area": "General science",
+      "studyType": "A levels",
+      "startDate": "2024-08-01",
+      "endDate": "2026-06-01"
+    },
+    {
+      "institution": "GU Tech",
+      "area": "Computer Science",
+      "studyType": "BSCS",
+      "startDate": "2026-01-01",
+      "endDate": "2030-12-01"
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Fluent"
+    },
+    {
+      "language": "Urdu",
+      "fluency": "Native"
+    }
+  ]
+}

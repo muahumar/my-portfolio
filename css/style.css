@@ -392,13 +392,15 @@ h1 {
   position: relative;
   z-index: 1;
   display: block;
-  width: min(72vw, 18rem);
+  width: min(52vw, 12rem);
+  height: auto;
   aspect-ratio: 1;
   border: 1px solid color-mix(in srgb, var(--color-accent) 45%, var(--color-border));
-  border-radius: 42% 58% 53% 47% / 45% 42% 58% 55%;
+  border-radius: 50%;
   box-shadow: var(--shadow-card);
   object-fit: cover;
-  object-position: center 35%;
+  object-position: center;
+  object-view-box: inset(6% 10% 12% 10%);
   animation: float 7s ease-in-out infinite;
 }
 

@@ -12,13 +12,12 @@ Open `index.html` directly in a modern browser. All page content is hardcoded in
 
 Use the `EDIT` comments in `index.html` as a checklist for remaining personal assets and information:
 
-- Replace the profile-photo placeholder with a personal image at `assets/images/profile.jpg` and update its markup.
 - Add your resume PDF at `assets/images/resume.pdf` and enable the disabled hero download button.
 - Add the Projects navigation link and section when you have real projects to share. Use sanitized QA artifacts (for example, a sample test plan or bug report template); do not include confidential employer details.
 - Replace the `YYYY-MM` work start-date note with the actual start date when known.
-- Replace the example canonical and Open Graph URLs with the deployed site URL, and add a public 1200x630 social preview image.
+- Replace the SVG social preview (`assets/images/og-image.svg`) with a public 1200x630 PNG or JPG, since Facebook, LinkedIn, and X do not reliably render SVG previews.
 
-The Projects section is intentionally hidden until real projects are available. The canonical and Open Graph URLs and social image are placeholders until deployment.
+The Projects section is intentionally hidden until real projects are available. The canonical and Open Graph URLs point to the live GitHub Pages site.
 
 ## Customize colors and fonts
 

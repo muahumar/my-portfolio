@@ -9,20 +9,30 @@ const firebase = require('./lib/firebase');
 const auth = require('./lib/auth');
 const views = require('./lib/views');
 
+// When bundled (e.g. Netlify esbuild into netlify/functions/web.js), __dirname is
+// the bundle output directory rather than blog/, so locate blog/ from candidate roots.
+const BLOG_DIR = [
+  __dirname,
+  path.resolve(__dirname, '..', '..', 'blog'),
+  path.resolve(__dirname, '..', 'blog'),
+  process.env.LAMBDA_TASK_ROOT && path.join(process.env.LAMBDA_TASK_ROOT, 'blog'),
+  path.join(process.cwd(), 'blog'),
+].find((d) => d && fs.existsSync(path.join(d, 'public', 'admin.html'))) || __dirname;
+
 // Minimal .env loader (no dependency). Real environment variables win.
-for (const file of [path.join(__dirname, '..', '.env'), path.join(__dirname, '.env')]) {
+for (const file of [path.join(BLOG_DIR, '..', '.env'), path.join(BLOG_DIR, '.env')]) {
   if (!fs.existsSync(file)) continue;
   for (const line of fs.readFileSync(file, 'utf8').split(/\r?\n/)) {
     const m = line.match(/^\s*([A-Z0-9_]+)\s*=\s*(.*?)\s*$/);
     if (m && !(m[1] in process.env)) process.env[m[1]] = m[2].replace(/^(['"])(.*)\1$/, '$2');
   }
 }
-const ROOT = path.resolve(__dirname, '..');
+const ROOT = path.resolve(BLOG_DIR, '..');
 const SERVERLESS = !!(process.env.NETLIFY || process.env.LAMBDA_TASK_ROOT);
 // Serverless filesystems are read-only except tmp; real data lives in Firebase there.
-const DATA_DIR = path.resolve(process.env.DATA_DIR || (SERVERLESS ? path.join(require('node:os').tmpdir(), 'blog-data') : path.join(__dirname, 'data')));
+const DATA_DIR = path.resolve(process.env.DATA_DIR || (SERVERLESS ? path.join(require('node:os').tmpdir(), 'blog-data') : path.join(BLOG_DIR, 'data')));
 const UPLOAD_DIR = path.join(DATA_DIR, 'uploads');
-const PUBLIC_DIR = path.join(__dirname, 'public');
+const PUBLIC_DIR = path.join(BLOG_DIR, 'public');
 const PORT = +process.env.PORT || 3000;
 const SITE_URL = (process.env.SITE_URL || `http://localhost:${PORT}`).replace(/\/$/, '');
 const PAGE_SIZE = 9;
@@ -258,12 +268,13 @@ const handler = async (req, res) => {
     const url = new URL(req.url, 'http://localhost');
     const p = url.pathname;
 
+    if (p === '/blog/admin' || p === '/blog/admin/') return send(res, 302, '', 'text/plain', { Location: '/admin' });
     if (p.startsWith('/api/')) return await api(req, res, url);
     if (p === '/blog' || p.startsWith('/blog/')) return await blogPages(req, res, url);
     if (req.method !== 'GET' && req.method !== 'HEAD') return send(res, 405, 'Method not allowed', 'text/plain');
 
     if (p === '/admin' || p === '/admin/') return serveFile(res, path.join(PUBLIC_DIR, 'admin.html'), 'no-store');
-    if (p === '/_blog/markdown.js') return serveFile(res, path.join(__dirname, 'lib', 'markdown.js'), 'no-cache');
+    if (p === '/_blog/markdown.js') return serveFile(res, path.join(BLOG_DIR, 'lib', 'markdown.js'), 'no-cache');
     if (p.startsWith('/_blog/')) {
       const f = safeJoin(PUBLIC_DIR, p.slice(7));
       return f && path.basename(f) !== 'admin.html' ? serveFile(res, f, 'no-cache') : send(res, 404, 'Not found', 'text/plain');

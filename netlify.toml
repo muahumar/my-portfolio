@@ -28,6 +28,12 @@
   force = true
 
 [[redirects]]
+  from = "/admin/*"
+  to = "/.netlify/functions/web"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/web"
   status = 200

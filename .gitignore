@@ -1,2 +1,9 @@
 # Local Netlify folder
 .netlify
+
+# Blog runtime data (posts, uploads, admin credentials)
+blog/data/
+node_modules/
+serviceAccount*.json
+.env
+dist/

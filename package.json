@@ -1,0 +1,17 @@
+{
+  "name": "portfolio-blog",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfolio site with an admin-only custom blog (zero dependencies).",
+  "scripts": {
+    "start": "node blog/server.js",
+    "test": "node blog/test/smoke.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "firebase-admin": "^14.5.0",
+    "serverless-http": "^4.0.0"
+  }
+}

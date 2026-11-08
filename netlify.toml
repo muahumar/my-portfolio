@@ -11,54 +11,54 @@
 # Dynamic routes go to the single blog function; static files are served from dist/.
 [[redirects]]
   from = "/blog"
-  to = "/.netlify/functions/blog"
+  to = "/.netlify/functions/web"
   status = 200
   force = true
 
 [[redirects]]
   from = "/blog/*"
-  to = "/.netlify/functions/blog"
+  to = "/.netlify/functions/web"
   status = 200
   force = true
 
 [[redirects]]
   from = "/admin"
-  to = "/.netlify/functions/blog"
+  to = "/.netlify/functions/web"
   status = 200
   force = true
 
 [[redirects]]
   from = "/api/*"
-  to = "/.netlify/functions/blog"
+  to = "/.netlify/functions/web"
   status = 200
   force = true
 
 [[redirects]]
   from = "/uploads/*"
-  to = "/.netlify/functions/blog"
+  to = "/.netlify/functions/web"
   status = 200
   force = true
 
 [[redirects]]
   from = "/_blog/admin.js"
-  to = "/.netlify/functions/blog"
+  to = "/.netlify/functions/web"
   status = 200
   force = true
 
 [[redirects]]
   from = "/_blog/admin.css"
-  to = "/.netlify/functions/blog"
+  to = "/.netlify/functions/web"
   status = 200
   force = true
 
 [[redirects]]
   from = "/_blog/markdown.js"
-  to = "/.netlify/functions/blog"
+  to = "/.netlify/functions/web"
   status = 200
   force = true
 
 [[redirects]]
   from = "/_blog/blog.js"
-  to = "/.netlify/functions/blog"
+  to = "/.netlify/functions/web"
   status = 200
   force = true
